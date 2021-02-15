@@ -1,0 +1,43 @@
+
+<form novalidate class="mt-5" (ngSubmit)="onSave()" [formGroup]="contactForm">
+<div class="container2">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Nombre" formControlName="name" [class]="isValidField('name')">
+            <div class="invalid-feedback">
+                <span *ngIf="contactForm.get('name').errors?.required">
+                    Por favor digite su nombre.
+                </span>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Apellido" formControlName="lastName" [class]="isValidField('lastName')">
+            <div class="invalid-feedback">
+                <span *ngIf="contactForm.get('lastName').errors?.required">
+                    Por favor digite su apellido.
+                </span>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <input type="email" class="form-control" placeholder="Email" formControlName="email" [class]="isValidField('email')">
+            <div class="invalid-feedback">
+                <span *ngIf="contactForm.get('email').errors?.required">
+                    Por favor digite su email.
+                </span>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+        <textarea  class="form-control" placeholder="escriba el mensaje de contacto aqui" formControlName="message" [class]="isValidField('message')"></textarea>
+        <div class="invalid-feedback">
+            <span *ngIf="contactForm.get('message').errors?.required">
+                Por favor digite su mensage.
+            </span>
+            <span *ngIf="contactForm.get('message').errors?.minLength">
+                El mensaje debe contener al menos 10 caracteres.
+            </span>
+        </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-block btn-primary col-md-6">Enviar</button>
+</div>
+</form>

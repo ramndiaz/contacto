@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "contacto-f6c4e": {
+      "hosting": {
+        "contacto": [
+          "contacto-f6c4e"
+        ]
+      }
+    }
+  }
+}

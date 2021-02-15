@@ -123,9 +123,16 @@
               "devServerTarget": "contacto:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "contacto"
+  "defaultProject": "contacto",
+  "cli": {
+    "analytics": "dd758cc3-7297-4ebd-a7f3-249cc9cfc00b"
+  }
 }

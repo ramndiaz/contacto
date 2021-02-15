@@ -1,0 +1,29 @@
+nav.menu{
+    background-color: rgb(55, 57, 139);
+    color: rgb(4, 5, 5);
+    height: 2rem;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        li {
+            
+            &:hover{
+                background-color: rgb(84, 14, 248);
+                height: 2rem;
+                transition: all 1s;
+
+            }
+        }
+        a {
+            color: aliceblue;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0px;
+
+        }
+    }
+
+
+}
